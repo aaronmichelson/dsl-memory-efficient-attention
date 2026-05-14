@@ -9,40 +9,43 @@ Aaron Michelson
 
 ## Overview
 
-This project explores compiler-inspired and domain-specific programming techniques for improving the efficiency of transformer attention mechanisms, with a particular focus on memory-efficient attention similar to FlashAttention-style approaches.
+This repository contains the implementation, experiments, benchmarking notebooks, figures, and evaluation outputs for a graduate research term project focused on memory-efficient transformer attention mechanisms.
 
-The project was developed as part of the COMPSCI 790 graduate term project at the University of Wisconsin–Milwaukee. The work investigates how ideas from domain-specific languages (DSLs), operator fusion, JIT compilation, and tiled computation can reduce memory overhead and improve execution efficiency for large-scale transformer workloads.
+The project investigates how compiler-inspired optimizations and domain-specific programming techniques can improve transformer attention performance while reducing GPU memory overhead. The work is heavily inspired by FlashAttention-style approaches, tiled computation strategies, operator fusion, and modern AI compiler systems.
 
-The repository includes weekly experimental notebooks, benchmarking outputs, generated figures, and final evaluation artifacts used throughout the research and development process.
-
----
-
-## Project Goals
-
-The primary goals of this project are:
-
-- Explore memory-efficient attention implementations inspired by FlashAttention
-- Investigate compiler-style transformations for tensor operations
-- Analyze GPU execution behavior and memory traffic
-- Study the effects of kernel fusion and tiled computation
-- Benchmark optimized attention workflows against naïve implementations
-- Examine application scenarios where customized optimization provides tangible benefits
+The repository includes six weeks of progressively developed experiments, beginning with profiling and baseline analysis and culminating in final benchmarking and evaluation studies.
 
 ---
 
-## Research Focus
+## Project Objectives
 
-This project emphasizes several major concepts in modern AI systems and compiler design:
+The goals of this project include:
+
+- Explore memory-efficient transformer attention implementations
+- Investigate FlashAttention-style tiled computation
+- Analyze GPU memory behavior during attention execution
+- Evaluate compiler-style operator fusion strategies
+- Study JIT compilation and execution overhead
+- Benchmark runtime and memory efficiency improvements
+- Examine long-context transformer optimization techniques
+- Develop reproducible experimental workflows for AI systems research
+
+---
+
+## Research Areas
+
+This project focuses on several major topics in modern AI systems and compiler research:
 
 - Domain-Specific Languages (DSLs)
-- Memory-efficient attention mechanisms
-- FlashAttention-style tiling strategies
-- Operator fusion
-- JIT compilation
-- GPU kernel optimization
-- CUDA execution efficiency
-- Transformer scaling challenges
-- Long-context inference optimization
+- Memory-Efficient Attention
+- FlashAttention-Inspired Optimization
+- GPU Kernel Fusion
+- JIT Compilation
+- Transformer Systems
+- CUDA Performance Analysis
+- Tensor Computation Optimization
+- Long-Context Inference
+- AI Compiler Techniques
 
 ---
 
@@ -52,23 +55,29 @@ This project emphasizes several major concepts in modern AI systems and compiler
 dsl-memory-efficient-attention/
 │
 ├── figures/
-│   ├── Generated visualizations and diagrams
-│   ├── Performance charts
-│   └── Experimental figures used in reports
+│   ├── Performance plots
+│   ├── Experimental visualizations
+│   ├── Attention benchmarking charts
+│   └── Figures used in the final report
 │
 ├── notebooks/
-│   ├── Week 1 notebooks
-│   ├── Week 2 notebooks
-│   ├── Week 3 notebooks
-│   ├── Week 4 notebooks
-│   ├── Week 5 notebooks
-│   └── Week 6 notebooks
+│   ├── Week 1 exploratory profiling
+│   ├── Week 2 optimization experiments
+│   ├── Week 3 JIT and fusion analysis
+│   ├── Week 4 attention implementation studies
+│   ├── Week 5 benchmarking experiments
+│   └── Week 6 final evaluation notebooks
 │
 ├── results/
-│   ├── CSV benchmark outputs
+│   ├── Benchmark CSV outputs
 │   ├── Profiling summaries
-│   ├── Timing results
+│   ├── Runtime measurements
 │   └── Experimental evaluation data
+│
+├── tables/
+│   ├── Final report tables
+│   ├── Experimental summary tables
+│   └── Quantitative evaluation outputs
 │
 ├── README.md
 └── .gitignore
@@ -76,31 +85,52 @@ dsl-memory-efficient-attention/
 
 ---
 
+## Experimental Workflow
+
+### Weeks 1–2
+- Baseline transformer attention analysis
+- GPU profiling exploration
+- Initial benchmarking setup
+- Runtime and memory inspection
+
+### Weeks 3–4
+- JIT compilation experiments
+- Operator fusion analysis
+- Attention optimization studies
+- Intermediate implementation evaluation
+
+### Weeks 5–6
+- Final benchmarking and evaluation
+- Comparative runtime analysis
+- Memory efficiency measurements
+- Quantitative CSV result generation
+- Final report figures and tables
+
+---
+
 ## Experimental Topics
 
-The notebooks and experiments in this repository include:
+The repository includes experiments involving:
 
-- Baseline transformer attention implementations
-- Memory-efficient attention variants
-- Attention tiling strategies
-- Profiling GPU memory usage
-- Kernel launch overhead analysis
-- JIT compilation experiments
-- Tensor operation fusion
+- Naïve transformer attention
+- Memory-efficient attention
+- Tiled attention execution
+- Attention kernel optimization
+- GPU memory profiling
 - Runtime benchmarking
-- Throughput and latency comparisons
-- Long-context attention analysis
+- JIT compilation overhead
+- Kernel fusion performance
+- Long-context transformer scaling
+- Throughput and latency analysis
 
 ---
 
 ## Technologies Used
 
-### Programming Languages
-
+### Programming Language
 - Python
 
 ### Frameworks and Libraries
-
 - PyTorch
 - JAX
 - NumPy
@@ -108,18 +138,17 @@ The notebooks and experiments in this repository include:
 - Matplotlib
 - Scikit-learn
 
-### Development Tools
-
+### Development Environment
 - Google Colab
 - Visual Studio Code
 - GitHub
-- CUDA-enabled GPU environments
+- CUDA-enabled GPU systems
 
 ---
 
-## Hardware Environment
+## Hardware and Execution Environment
 
-Experiments were conducted using NVIDIA GPU acceleration with CUDA-enabled environments for profiling and benchmarking attention workloads.
+Experiments were performed using NVIDIA CUDA-enabled GPU environments for transformer attention benchmarking and profiling analysis.
 
 ---
 
@@ -139,20 +168,20 @@ University of Wisconsin–Milwaukee
 
 ---
 
-## Future Work
+## Future Directions
 
-Potential future extensions of this project include:
+Potential future extensions of this work include:
 
-- Triton-based kernel implementations
-- Custom CUDA attention kernels
-- Auto-tuning tile sizes
-- Streaming attention architectures
-- Multi-tenant inference optimization
-- Long-context transformer benchmarking
-- DSL abstractions for transformer compilation pipelines
+- Triton-based attention kernels
+- Auto-tuned tiling strategies
+- Custom CUDA implementations
+- Streaming transformer inference
+- Multi-tenant LLM optimization
+- Advanced long-context attention systems
+- Compiler-assisted transformer execution pipelines
 
 ---
 
-## License
+## Academic Purpose
 
-This repository is intended for academic and research purposes.
+This repository was created for graduate academic research and educational purposes as part of a term project in AI systems and domain-specific programming.
